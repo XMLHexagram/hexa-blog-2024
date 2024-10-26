@@ -48,8 +48,9 @@
 				center: ['40%', '50%'],
 				label: {
 					show: true,
-          position: "inside",
+          position: "inner",
 					formatter: '{b} \n {c} ({d}%)',
+          fontSize: 16
 				},
 				emphasis: {
 					itemStyle: {
