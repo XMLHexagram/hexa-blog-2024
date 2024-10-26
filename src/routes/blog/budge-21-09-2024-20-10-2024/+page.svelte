@@ -6,7 +6,7 @@
   import summary_cny from './metadata/summary_cny.json'
   import categoryData from './metadata/category_data.json'
   import category_detail_Meal from './metadata/category_detail_Meal.json'
-  import category_detail_SuperMarket from './metadata/category_detail_SuperMarket.json'
+  import category_detail_SuperMarket from './metadata/category_detail_Supermarket.json'
   import category_detail_Transport from './metadata/category_detail_Transportation.json'
   // New imports
   import category_detail_OnlineShopping from './metadata/category_detail_Online Shopping.json'
