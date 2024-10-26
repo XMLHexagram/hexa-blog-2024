@@ -1,0 +1,951 @@
+<!DOCTYPE html> <html><head> <title>Budget Analysis</title> <meta charset='UTF-8'> <script src='https://cdn.plot.ly/plotly-latest.min.js'></script> <link rel='stylesheet' href='https://unpkg.com/sakura.css/css/sakura.css'> </head><body> <h2>Summary in EUR</h2> <table>
+ <thead>
+  <tr>
+   <th style="text-align:right;"> Total Spending </th>
+   <th style="text-align:right;"> Reimbursable </th>
+   <th style="text-align:right;"> Income </th>
+   <th style="text-align:right;"> Net Spending </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:right;"> 5425.573 </td>
+   <td style="text-align:right;"> 2128 </td>
+   <td style="text-align:right;"> -601.25 </td>
+   <td style="text-align:right;"> 2696.323 </td>
+  </tr>
+</tbody>
+</table> <h2>Summary in CNY</h2> <table>
+ <thead>
+  <tr>
+   <th style="text-align:right;"> Total Spending </th>
+   <th style="text-align:right;"> Reimbursable </th>
+   <th style="text-align:right;"> Income </th>
+   <th style="text-align:right;"> Net Spending </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:right;"> 43404.59 </td>
+   <td style="text-align:right;"> 17024 </td>
+   <td style="text-align:right;"> -4810 </td>
+   <td style="text-align:right;"> 21570.59 </td>
+  </tr>
+</tbody>
+</table> <div id='category_pie' style='width:100%;aspect-ratio:1;'></div> <div id='category_timeline' style='width:100%;'></div> <script>
+        var plotData = {
+  "visdat": {
+    "13e56785f3859": ["function () ", "plotlyVisDat"]
+  },
+  "cur_data": "13e56785f3859",
+  "attrs": {
+    "13e56785f3859": {
+      "labels": {},
+      "values": {},
+      "textinfo": "label+percent+value",
+      "hovertemplate": "%{label}<br>%{percent}<br>%{value:.2f} EUR<extra><\/extra>",
+      "alpha_stroke": 1,
+      "sizes": [10, 100],
+      "spans": [1, 20],
+      "type": "pie"
+    }
+  },
+  "layout": {
+    "margin": {
+      "b": 50,
+      "l": 50,
+      "t": 100,
+      "r": 50
+    },
+    "title": "Total Spending by Category (EUR)",
+    "autosize": true,
+    "annotations": [
+      {
+        "x": 1,
+        "y": 1,
+        "text": "Total: 4824.32 EUR<br />Total (without Reimbursable): 2696.32 EUR<br />Total (without Reimbursable & Hotel): 2108.92 EUR",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper"
+      }
+    ],
+    "hovermode": "closest",
+    "showlegend": true
+  },
+  "source": "A",
+  "config": {
+    "modeBarButtonsToAdd": ["hoverclosest", "hovercompare"],
+    "showSendToCloud": false
+  },
+  "data": [
+    {
+      "labels": ["Communication", "Furniture", "Hotel", "Housing", "Meal", "Onetime", "Online Shopping", "Reimbursable", "Subscription", "Supermarket", "Transportation"],
+      "values": [40, 285, 587.39999999999998, 1003.5, 278.63000000000005, 118.45999999999999, 68.629999999999995, 2128, 61.813333333333333, 200.39000000000001, 52.5],
+      "textinfo": "label+percent+value",
+      "hovertemplate": ["%{label}<br>%{percent}<br>%{value:.2f} EUR<extra><\/extra>", "%{label}<br>%{percent}<br>%{value:.2f} EUR<extra><\/extra>", "%{label}<br>%{percent}<br>%{value:.2f} EUR<extra><\/extra>", "%{label}<br>%{percent}<br>%{value:.2f} EUR<extra><\/extra>", "%{label}<br>%{percent}<br>%{value:.2f} EUR<extra><\/extra>", "%{label}<br>%{percent}<br>%{value:.2f} EUR<extra><\/extra>", "%{label}<br>%{percent}<br>%{value:.2f} EUR<extra><\/extra>", "%{label}<br>%{percent}<br>%{value:.2f} EUR<extra><\/extra>", "%{label}<br>%{percent}<br>%{value:.2f} EUR<extra><\/extra>", "%{label}<br>%{percent}<br>%{value:.2f} EUR<extra><\/extra>", "%{label}<br>%{percent}<br>%{value:.2f} EUR<extra><\/extra>"],
+      "type": "pie",
+      "marker": {
+        "color": "rgba(31,119,180,1)",
+        "line": {
+          "color": "rgba(255,255,255,1)"
+        }
+      },
+      "frame": null
+    }
+  ],
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.20000000000000001,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": ["plotly_hover", "plotly_click", "plotly_selected", "plotly_relayout", "plotly_brushed", "plotly_brushing", "plotly_clickannotation", "plotly_doubleclick", "plotly_deselect", "plotly_afterplot", "plotly_sunburstclick"],
+  "base_url": "https://plot.ly"
+};
+        Plotly.newPlot('category_pie', plotData.data, plotData.layout);
+      </script> <script>
+        var plotData = {
+  "visdat": {
+    "13e56336c98cc": ["function () ", "plotlyVisDat"]
+  },
+  "cur_data": "13e56336c98cc",
+  "attrs": {
+    "13e56336c98cc": {
+      "x": {},
+      "y": {},
+      "mode": "lines+markers",
+      "text": {},
+      "hoverinfo": "text",
+      "alpha_stroke": 1,
+      "sizes": [10, 100],
+      "spans": [1, 20],
+      "type": "scatter"
+    }
+  },
+  "layout": {
+    "margin": {
+      "b": 40,
+      "l": 60,
+      "t": 25,
+      "r": 10
+    },
+    "title": "Daily Total Spending",
+    "xaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "title": "Date",
+      "range": ["2024-09-21", "2024-10-20"]
+    },
+    "yaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "title": "Amount (EUR)",
+      "range": [5, 954.3374999999985]
+    },
+    "hovermode": "closest",
+    "showlegend": false
+  },
+  "source": "A",
+  "config": {
+    "modeBarButtonsToAdd": ["hoverclosest", "hovercompare"],
+    "showSendToCloud": false
+  },
+  "data": [
+    {
+      "x": ["2024-09-21", "2024-09-22", "2024-09-23", "2024-09-24", "2024-09-25", "2024-09-26", "2024-09-27", "2024-09-28", "2024-09-29", "2024-09-30", "2024-10-01", "2024-10-02", "2024-10-03", "2024-10-04", "2024-10-05", "2024-10-06", "2024-10-07", "2024-10-08", "2024-10-09", "2024-10-10", "2024-10-12", "2024-10-13", "2024-10-14", "2024-10-15", "2024-10-16", "2024-10-17", "2024-10-18", "2024-10-20"],
+      "y": [1309.8499999999999, 68.739999999999995, 294.10000000000002, 133.25, 25.690000000000001, -589.79999999999995, 2891.5699999999997, 17.73, 25.109999999999999, 10.199999999999999, 13.713333333333333, 14.5, 29.699999999999999, 146.04999999999998, 118.43000000000001, 49.420000000000002, 31.630000000000003, 14.039999999999999, 61.009999999999998, 21.715, 16.149999999999999, 5, 9.8500000000000014, 13.865, 12.82, 14.1, 34.340000000000003, 31.550000000000001],
+      "mode": "lines+markers",
+      "text": ["Date: 2024-09-21 <br>Amount: 1309.85 EUR", "Date: 2024-09-22 <br>Amount: 68.74 EUR", "Date: 2024-09-23 <br>Amount: 294.1 EUR", "Date: 2024-09-24 <br>Amount: 133.25 EUR", "Date: 2024-09-25 <br>Amount: 25.69 EUR", "Date: 2024-09-26 <br>Amount: -589.8 EUR", "Date: 2024-09-27 <br>Amount: 2891.57 EUR", "Date: 2024-09-28 <br>Amount: 17.73 EUR", "Date: 2024-09-29 <br>Amount: 25.11 EUR", "Date: 2024-09-30 <br>Amount: 10.2 EUR", "Date: 2024-10-01 <br>Amount: 13.71 EUR", "Date: 2024-10-02 <br>Amount: 14.5 EUR", "Date: 2024-10-03 <br>Amount: 29.7 EUR", "Date: 2024-10-04 <br>Amount: 146.05 EUR", "Date: 2024-10-05 <br>Amount: 118.43 EUR", "Date: 2024-10-06 <br>Amount: 49.42 EUR", "Date: 2024-10-07 <br>Amount: 31.63 EUR", "Date: 2024-10-08 <br>Amount: 14.04 EUR", "Date: 2024-10-09 <br>Amount: 61.01 EUR", "Date: 2024-10-10 <br>Amount: 21.72 EUR", "Date: 2024-10-12 <br>Amount: 16.15 EUR", "Date: 2024-10-13 <br>Amount: 5 EUR", "Date: 2024-10-14 <br>Amount: 9.85 EUR", "Date: 2024-10-15 <br>Amount: 13.87 EUR", "Date: 2024-10-16 <br>Amount: 12.82 EUR", "Date: 2024-10-17 <br>Amount: 14.1 EUR", "Date: 2024-10-18 <br>Amount: 34.34 EUR", "Date: 2024-10-20 <br>Amount: 31.55 EUR"],
+      "hoverinfo": ["text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text"],
+      "type": "scatter",
+      "marker": {
+        "color": "rgba(31,119,180,1)",
+        "line": {
+          "color": "rgba(31,119,180,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "error_x": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "line": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    }
+  ],
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.20000000000000001,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": ["plotly_hover", "plotly_click", "plotly_selected", "plotly_relayout", "plotly_brushed", "plotly_brushing", "plotly_clickannotation", "plotly_doubleclick", "plotly_deselect", "plotly_afterplot", "plotly_sunburstclick"],
+  "base_url": "https://plot.ly"
+};
+        Plotly.newPlot('category_timeline', plotData.data, plotData.layout);
+      </script> <div id='category_Hotel' style='width:100%;height:600px;'></div> <script>
+              var plotData = {
+  "visdat": {
+    "13e561ea39374": ["function () ", "plotlyVisDat"]
+  },
+  "cur_data": "13e561ea39374",
+  "attrs": {
+    "13e561ea39374": {
+      "labels": {},
+      "values": {},
+      "textinfo": "label+value",
+      "hovertemplate": "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>",
+      "alpha_stroke": 1,
+      "sizes": [10, 100],
+      "spans": [1, 20],
+      "type": "pie"
+    }
+  },
+  "layout": {
+    "margin": {
+      "b": 40,
+      "l": 60,
+      "t": 25,
+      "r": 10
+    },
+    "annotations": [
+      {
+        "x": 1,
+        "y": 0,
+        "text": "Total: 587.40 EUR",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper"
+      }
+    ],
+    "title": "Details for Hotel",
+    "hovermode": "closest",
+    "showlegend": true
+  },
+  "source": "A",
+  "config": {
+    "modeBarButtonsToAdd": ["hoverclosest", "hovercompare"],
+    "showSendToCloud": false
+  },
+  "data": [
+    {
+      "labels": ["Loca", "Shared Housing Fee", "Sumup *La Siesta Di Cita ", "Sumup *La Siesta Di Contita "],
+      "values": [866.25, -601.25, 29.899999999999999, 292.5],
+      "textinfo": "label+value",
+      "hovertemplate": ["%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>"],
+      "type": "pie",
+      "marker": {
+        "color": "rgba(31,119,180,1)",
+        "line": {
+          "color": "rgba(255,255,255,1)"
+        }
+      },
+      "frame": null
+    }
+  ],
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.20000000000000001,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": ["plotly_hover", "plotly_click", "plotly_selected", "plotly_relayout", "plotly_brushed", "plotly_brushing", "plotly_clickannotation", "plotly_doubleclick", "plotly_deselect", "plotly_afterplot", "plotly_sunburstclick"],
+  "base_url": "https://plot.ly"
+};
+              Plotly.newPlot('category_Hotel', plotData.data, plotData.layout);
+            </script><div id='category_Transportation' style='width:100%;height:600px;'></div> <script>
+              var plotData = {
+  "visdat": {
+    "13e56525b463": ["function () ", "plotlyVisDat"]
+  },
+  "cur_data": "13e56525b463",
+  "attrs": {
+    "13e56525b463": {
+      "labels": {},
+      "values": {},
+      "textinfo": "label+value",
+      "hovertemplate": "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>",
+      "alpha_stroke": 1,
+      "sizes": [10, 100],
+      "spans": [1, 20],
+      "type": "pie"
+    }
+  },
+  "layout": {
+    "margin": {
+      "b": 40,
+      "l": 60,
+      "t": 25,
+      "r": 10
+    },
+    "annotations": [
+      {
+        "x": 1,
+        "y": 0,
+        "text": "Total: 310.50 EUR",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper"
+      }
+    ],
+    "title": "Details for Transportation",
+    "hovermode": "closest",
+    "showlegend": true
+  },
+  "source": "A",
+  "config": {
+    "modeBarButtonsToAdd": ["hoverclosest", "hovercompare"],
+    "showSendToCloud": false
+  },
+  "data": [
+    {
+      "labels": ["Autostradaleita ", "G.t.t. Porta Nuovaita ", "Gruppo Torinese Traspoita ", "Www.gtt.to.it"],
+      "values": [22, 258, 9.5, 21],
+      "textinfo": "label+value",
+      "hovertemplate": ["%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>"],
+      "type": "pie",
+      "marker": {
+        "color": "rgba(31,119,180,1)",
+        "line": {
+          "color": "rgba(255,255,255,1)"
+        }
+      },
+      "frame": null
+    }
+  ],
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.20000000000000001,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": ["plotly_hover", "plotly_click", "plotly_selected", "plotly_relayout", "plotly_brushed", "plotly_brushing", "plotly_clickannotation", "plotly_doubleclick", "plotly_deselect", "plotly_afterplot", "plotly_sunburstclick"],
+  "base_url": "https://plot.ly"
+};
+              Plotly.newPlot('category_Transportation', plotData.data, plotData.layout);
+            </script><div id='category_Meal' style='width:100%;height:600px;'></div> <script>
+              var plotData = {
+  "visdat": {
+    "13e566e65d238": ["function () ", "plotlyVisDat"]
+  },
+  "cur_data": "13e566e65d238",
+  "attrs": {
+    "13e566e65d238": {
+      "labels": {},
+      "values": {},
+      "textinfo": "label+value",
+      "hovertemplate": "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>",
+      "alpha_stroke": 1,
+      "sizes": [10, 100],
+      "spans": [1, 20],
+      "type": "pie"
+    }
+  },
+  "layout": {
+    "margin": {
+      "b": 40,
+      "l": 60,
+      "t": 25,
+      "r": 10
+    },
+    "annotations": [
+      {
+        "x": 1,
+        "y": 0,
+        "text": "Total: 278.63 EUR",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper"
+      }
+    ],
+    "title": "Details for Meal",
+    "hovermode": "closest",
+    "showlegend": true
+  },
+  "source": "A",
+  "config": {
+    "modeBarButtonsToAdd": ["hoverclosest", "hovercompare"],
+    "showSendToCloud": false
+  },
+  "data": [
+    {
+      "labels": ["Bk", "Cremi Srl", "Gelato", "Ikea", "Kebab", "Mcd", "Mollica Sncita ", "Pizza Kebab Himaita ", "Ristorante Pizzeria Veccita ", "Ristorante Pizzeria Veccita \t", "Savureita \t", "中餐", "火锅"],
+      "values": [58.850000000000009, 5.9800000000000004, 3, 9.3999999999999986, 14, 92.399999999999991, 9.5, 7.5, 8.3000000000000007, 8, 15, 17, 29.699999999999999],
+      "textinfo": "label+value",
+      "hovertemplate": ["%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>"],
+      "type": "pie",
+      "marker": {
+        "color": "rgba(31,119,180,1)",
+        "line": {
+          "color": "rgba(255,255,255,1)"
+        }
+      },
+      "frame": null
+    }
+  ],
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.20000000000000001,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": ["plotly_hover", "plotly_click", "plotly_selected", "plotly_relayout", "plotly_brushed", "plotly_brushing", "plotly_clickannotation", "plotly_doubleclick", "plotly_deselect", "plotly_afterplot", "plotly_sunburstclick"],
+  "base_url": "https://plot.ly"
+};
+              Plotly.newPlot('category_Meal', plotData.data, plotData.layout);
+            </script><div id='category_Furniture' style='width:100%;height:600px;'></div> <script>
+              var plotData = {
+  "visdat": {
+    "13e565ecc9327": ["function () ", "plotlyVisDat"]
+  },
+  "cur_data": "13e565ecc9327",
+  "attrs": {
+    "13e565ecc9327": {
+      "labels": {},
+      "values": {},
+      "textinfo": "label+value",
+      "hovertemplate": "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>",
+      "alpha_stroke": 1,
+      "sizes": [10, 100],
+      "spans": [1, 20],
+      "type": "pie"
+    }
+  },
+  "layout": {
+    "margin": {
+      "b": 40,
+      "l": 60,
+      "t": 25,
+      "r": 10
+    },
+    "annotations": [
+      {
+        "x": 1,
+        "y": 0,
+        "text": "Total: 285.00 EUR",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper"
+      }
+    ],
+    "title": "Details for Furniture",
+    "hovermode": "closest",
+    "showlegend": true
+  },
+  "source": "A",
+  "config": {
+    "modeBarButtonsToAdd": ["hoverclosest", "hovercompare"],
+    "showSendToCloud": false
+  },
+  "data": [
+    {
+      "labels": ["Ikea"],
+      "values": [285],
+      "textinfo": "label+value",
+      "hovertemplate": "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>",
+      "type": "pie",
+      "marker": {
+        "color": "rgba(31,119,180,1)",
+        "line": {
+          "color": "rgba(255,255,255,1)"
+        }
+      },
+      "frame": null
+    }
+  ],
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.20000000000000001,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": ["plotly_hover", "plotly_click", "plotly_selected", "plotly_relayout", "plotly_brushed", "plotly_brushing", "plotly_clickannotation", "plotly_doubleclick", "plotly_deselect", "plotly_afterplot", "plotly_sunburstclick"],
+  "base_url": "https://plot.ly"
+};
+              Plotly.newPlot('category_Furniture', plotData.data, plotData.layout);
+            </script><div id='category_Communication' style='width:100%;height:600px;'></div> <script>
+              var plotData = {
+  "visdat": {
+    "13e5648d11610": ["function () ", "plotlyVisDat"]
+  },
+  "cur_data": "13e5648d11610",
+  "attrs": {
+    "13e5648d11610": {
+      "labels": {},
+      "values": {},
+      "textinfo": "label+value",
+      "hovertemplate": "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>",
+      "alpha_stroke": 1,
+      "sizes": [10, 100],
+      "spans": [1, 20],
+      "type": "pie"
+    }
+  },
+  "layout": {
+    "margin": {
+      "b": 40,
+      "l": 60,
+      "t": 25,
+      "r": 10
+    },
+    "annotations": [
+      {
+        "x": 1,
+        "y": 0,
+        "text": "Total: 40.00 EUR",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper"
+      }
+    ],
+    "title": "Details for Communication",
+    "hovermode": "closest",
+    "showlegend": true
+  },
+  "source": "A",
+  "config": {
+    "modeBarButtonsToAdd": ["hoverclosest", "hovercompare"],
+    "showSendToCloud": false
+  },
+  "data": [
+    {
+      "labels": ["Vodafone Storeita "],
+      "values": [40],
+      "textinfo": "label+value",
+      "hovertemplate": "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>",
+      "type": "pie",
+      "marker": {
+        "color": "rgba(31,119,180,1)",
+        "line": {
+          "color": "rgba(255,255,255,1)"
+        }
+      },
+      "frame": null
+    }
+  ],
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.20000000000000001,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": ["plotly_hover", "plotly_click", "plotly_selected", "plotly_relayout", "plotly_brushed", "plotly_brushing", "plotly_clickannotation", "plotly_doubleclick", "plotly_deselect", "plotly_afterplot", "plotly_sunburstclick"],
+  "base_url": "https://plot.ly"
+};
+              Plotly.newPlot('category_Communication', plotData.data, plotData.layout);
+            </script><div id='category_Supermarket' style='width:100%;height:600px;'></div> <script>
+              var plotData = {
+  "visdat": {
+    "13e5616ff99c9": ["function () ", "plotlyVisDat"]
+  },
+  "cur_data": "13e5616ff99c9",
+  "attrs": {
+    "13e5616ff99c9": {
+      "labels": {},
+      "values": {},
+      "textinfo": "label+value",
+      "hovertemplate": "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>",
+      "alpha_stroke": 1,
+      "sizes": [10, 100],
+      "spans": [1, 20],
+      "type": "pie"
+    }
+  },
+  "layout": {
+    "margin": {
+      "b": 40,
+      "l": 60,
+      "t": 25,
+      "r": 10
+    },
+    "annotations": [
+      {
+        "x": 1,
+        "y": 0,
+        "text": "Total: 200.39 EUR",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper"
+      }
+    ],
+    "title": "Details for Supermarket",
+    "hovermode": "closest",
+    "showlegend": true
+  },
+  "source": "A",
+  "config": {
+    "modeBarButtonsToAdd": ["hoverclosest", "hovercompare"],
+    "showSendToCloud": false
+  },
+  "data": [
+    {
+      "labels": ["Carrefour", "Esselunga", "Lidl", "Nova Coop", "Penny"],
+      "values": [0.79000000000000004, 63.939999999999998, 53.030000000000001, 12.16, 70.469999999999999],
+      "textinfo": "label+value",
+      "hovertemplate": ["%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>"],
+      "type": "pie",
+      "marker": {
+        "color": "rgba(31,119,180,1)",
+        "line": {
+          "color": "rgba(255,255,255,1)"
+        }
+      },
+      "frame": null
+    }
+  ],
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.20000000000000001,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": ["plotly_hover", "plotly_click", "plotly_selected", "plotly_relayout", "plotly_brushed", "plotly_brushing", "plotly_clickannotation", "plotly_doubleclick", "plotly_deselect", "plotly_afterplot", "plotly_sunburstclick"],
+  "base_url": "https://plot.ly"
+};
+              Plotly.newPlot('category_Supermarket', plotData.data, plotData.layout);
+            </script><div id='category_Onetime' style='width:100%;height:600px;'></div> <script>
+              var plotData = {
+  "visdat": {
+    "13e5666c966ea": ["function () ", "plotlyVisDat"]
+  },
+  "cur_data": "13e5666c966ea",
+  "attrs": {
+    "13e5666c966ea": {
+      "labels": {},
+      "values": {},
+      "textinfo": "label+value",
+      "hovertemplate": "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>",
+      "alpha_stroke": 1,
+      "sizes": [10, 100],
+      "spans": [1, 20],
+      "type": "pie"
+    }
+  },
+  "layout": {
+    "margin": {
+      "b": 40,
+      "l": 60,
+      "t": 25,
+      "r": 10
+    },
+    "annotations": [
+      {
+        "x": 1,
+        "y": 0,
+        "text": "Total: 118.46 EUR",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper"
+      }
+    ],
+    "title": "Details for Onetime",
+    "hovermode": "closest",
+    "showlegend": true
+  },
+  "source": "A",
+  "config": {
+    "modeBarButtonsToAdd": ["hoverclosest", "hovercompare"],
+    "showSendToCloud": false
+  },
+  "data": [
+    {
+      "labels": ["Poste Italianeita ", "Tabaccheria Bertacchiniita "],
+      "values": [102.45999999999999, 16],
+      "textinfo": "label+value",
+      "hovertemplate": ["%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>"],
+      "type": "pie",
+      "marker": {
+        "color": "rgba(31,119,180,1)",
+        "line": {
+          "color": "rgba(255,255,255,1)"
+        }
+      },
+      "frame": null
+    }
+  ],
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.20000000000000001,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": ["plotly_hover", "plotly_click", "plotly_selected", "plotly_relayout", "plotly_brushed", "plotly_brushing", "plotly_clickannotation", "plotly_doubleclick", "plotly_deselect", "plotly_afterplot", "plotly_sunburstclick"],
+  "base_url": "https://plot.ly"
+};
+              Plotly.newPlot('category_Onetime', plotData.data, plotData.layout);
+            </script><div id='category_Housing' style='width:100%;height:600px;'></div> <script>
+              var plotData = {
+  "visdat": {
+    "13e563083c15e": ["function () ", "plotlyVisDat"]
+  },
+  "cur_data": "13e563083c15e",
+  "attrs": {
+    "13e563083c15e": {
+      "labels": {},
+      "values": {},
+      "textinfo": "label+value",
+      "hovertemplate": "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>",
+      "alpha_stroke": 1,
+      "sizes": [10, 100],
+      "spans": [1, 20],
+      "type": "pie"
+    }
+  },
+  "layout": {
+    "margin": {
+      "b": 40,
+      "l": 60,
+      "t": 25,
+      "r": 10
+    },
+    "annotations": [
+      {
+        "x": 1,
+        "y": 0,
+        "text": "Total: 2873.50 EUR",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper"
+      }
+    ],
+    "title": "Details for Housing",
+    "hovermode": "closest",
+    "showlegend": true
+  },
+  "source": "A",
+  "config": {
+    "modeBarButtonsToAdd": ["hoverclosest", "hovercompare"],
+    "showSendToCloud": false
+  },
+  "data": [
+    {
+      "labels": ["Campus X Torino Belfiore", "Laundry", "Monthly Fee", "Sundry Fees"],
+      "values": [1870, 10, 790, 203.5],
+      "textinfo": "label+value",
+      "hovertemplate": ["%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>"],
+      "type": "pie",
+      "marker": {
+        "color": "rgba(31,119,180,1)",
+        "line": {
+          "color": "rgba(255,255,255,1)"
+        }
+      },
+      "frame": null
+    }
+  ],
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.20000000000000001,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": ["plotly_hover", "plotly_click", "plotly_selected", "plotly_relayout", "plotly_brushed", "plotly_brushing", "plotly_clickannotation", "plotly_doubleclick", "plotly_deselect", "plotly_afterplot", "plotly_sunburstclick"],
+  "base_url": "https://plot.ly"
+};
+              Plotly.newPlot('category_Housing', plotData.data, plotData.layout);
+            </script><div id='category_Subscription' style='width:100%;height:600px;'></div> <script>
+              var plotData = {
+  "visdat": {
+    "13e561a0c1b34": ["function () ", "plotlyVisDat"]
+  },
+  "cur_data": "13e561a0c1b34",
+  "attrs": {
+    "13e561a0c1b34": {
+      "labels": {},
+      "values": {},
+      "textinfo": "label+value",
+      "hovertemplate": "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>",
+      "alpha_stroke": 1,
+      "sizes": [10, 100],
+      "spans": [1, 20],
+      "type": "pie"
+    }
+  },
+  "layout": {
+    "margin": {
+      "b": 40,
+      "l": 60,
+      "t": 25,
+      "r": 10
+    },
+    "annotations": [
+      {
+        "x": 1,
+        "y": 0,
+        "text": "Total: 61.81 EUR",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper"
+      }
+    ],
+    "title": "Details for Subscription",
+    "hovermode": "closest",
+    "showlegend": true
+  },
+  "source": "A",
+  "config": {
+    "modeBarButtonsToAdd": ["hoverclosest", "hovercompare"],
+    "showSendToCloud": false
+  },
+  "data": [
+    {
+      "labels": ["Bilibili大会员", "Ci En", "Fansly", "Netflix", "Patreon* Membership", "Piano"],
+      "values": [1.875, 3.3333333333333335, 28.98, 2.625, 5, 20],
+      "textinfo": "label+value",
+      "hovertemplate": ["%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>"],
+      "type": "pie",
+      "marker": {
+        "color": "rgba(31,119,180,1)",
+        "line": {
+          "color": "rgba(255,255,255,1)"
+        }
+      },
+      "frame": null
+    }
+  ],
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.20000000000000001,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": ["plotly_hover", "plotly_click", "plotly_selected", "plotly_relayout", "plotly_brushed", "plotly_brushing", "plotly_clickannotation", "plotly_doubleclick", "plotly_deselect", "plotly_afterplot", "plotly_sunburstclick"],
+  "base_url": "https://plot.ly"
+};
+              Plotly.newPlot('category_Subscription', plotData.data, plotData.layout);
+            </script><div id='category_Online_Shopping' style='width:100%;height:600px;'></div> <script>
+              var plotData = {
+  "visdat": {
+    "13e5610ce0048": ["function () ", "plotlyVisDat"]
+  },
+  "cur_data": "13e5610ce0048",
+  "attrs": {
+    "13e5610ce0048": {
+      "labels": {},
+      "values": {},
+      "textinfo": "label+value",
+      "hovertemplate": "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>",
+      "alpha_stroke": 1,
+      "sizes": [10, 100],
+      "spans": [1, 20],
+      "type": "pie"
+    }
+  },
+  "layout": {
+    "margin": {
+      "b": 40,
+      "l": 60,
+      "t": 25,
+      "r": 10
+    },
+    "annotations": [
+      {
+        "x": 1,
+        "y": 0,
+        "text": "Total: 68.63 EUR",
+        "showarrow": false,
+        "xref": "paper",
+        "yref": "paper"
+      }
+    ],
+    "title": "Details for Online Shopping",
+    "hovermode": "closest",
+    "showlegend": true
+  },
+  "source": "A",
+  "config": {
+    "modeBarButtonsToAdd": ["hoverclosest", "hovercompare"],
+    "showSendToCloud": false
+  },
+  "data": [
+    {
+      "labels": ["Shein", "Temu"],
+      "values": [13.140000000000001, 55.489999999999995],
+      "textinfo": "label+value",
+      "hovertemplate": ["%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>", "%{label}<br><U+20AC>%{value:.2f}<extra><\/extra>"],
+      "type": "pie",
+      "marker": {
+        "color": "rgba(31,119,180,1)",
+        "line": {
+          "color": "rgba(255,255,255,1)"
+        }
+      },
+      "frame": null
+    }
+  ],
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.20000000000000001,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": ["plotly_hover", "plotly_click", "plotly_selected", "plotly_relayout", "plotly_brushed", "plotly_brushing", "plotly_clickannotation", "plotly_doubleclick", "plotly_deselect", "plotly_afterplot", "plotly_sunburstclick"],
+  "base_url": "https://plot.ly"
+};
+              Plotly.newPlot('category_Online_Shopping', plotData.data, plotData.layout);
+            </script>NULL </body></html>

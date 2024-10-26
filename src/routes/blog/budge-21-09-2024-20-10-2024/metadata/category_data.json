@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Communication",
+    "value": 40
+  },
+  {
+    "name": "Furniture",
+    "value": 285
+  },
+  {
+    "name": "Hotel",
+    "value": 587.4
+  },
+  {
+    "name": "Housing",
+    "value": 1003.5
+  },
+  {
+    "name": "Meal",
+    "value": 278.63
+  },
+  {
+    "name": "Onetime",
+    "value": 118.46
+  },
+  {
+    "name": "Online Shopping",
+    "value": 68.63
+  },
+  {
+    "name": "Refundable",
+    "value": 2128
+  },
+  {
+    "name": "Subscription",
+    "value": 61.8133
+  },
+  {
+    "name": "Supermarket",
+    "value": 200.39
+  },
+  {
+    "name": "Transportation",
+    "value": 52.5
+  }
+]
