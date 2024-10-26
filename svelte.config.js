@@ -19,9 +19,6 @@ const config = {
 	},
 
 	extensions: ['.svelte', '.md'],
-	build: {
-		platform: 'node'
-	}
 };
 
 export default config;
