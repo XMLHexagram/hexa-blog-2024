@@ -44,7 +44,7 @@
 				name: 'Expense',
 				data: data,
 				type: 'pie',
-				// radius: ['60%'],
+				radius: ['60%'],
 				center: ['40%', '50%'],
 				label: {
 					show: true,
