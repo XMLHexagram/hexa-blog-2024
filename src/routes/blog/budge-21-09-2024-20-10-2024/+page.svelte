@@ -37,35 +37,35 @@
     <div class="w-full aspect-[1.2/1] mb-4">
       <Pie data={categoryData} title='Overall Expense By Category (EUR)'/>
     </div>
-    <div class="flex flex-wrap w-full">
-      <div class="w-1/2 aspect-1">
+    <div class="flex flex-col sm:flex-row sm:flex-wrap w-full">
+      <div class="w-full sm:w-1/2 aspect-1 mb-4">
         <Pie data={category_detail_Meal} title='Meal Expense By Category (EUR)' fontSize={16} showLegend={false}/>
       </div>
-      <div class="w-1/2 aspect-1">
+      <div class="w-full sm:w-1/2 aspect-1 mb-4">
         <Pie data={category_detail_SuperMarket} title='SuperMarket Expense By Category (EUR)' fontSize={16} showLegend={false}/>
       </div>
-      <div class="w-1/2 aspect-1">
+      <div class="w-full sm:w-1/2 aspect-1 mb-4">
         <Pie data={category_detail_Transport} title='Transportation Expense By Category (EUR)' fontSize={16} showLegend={false}/>
       </div>
-      <div class="w-1/2 aspect-1">
+      <div class="w-full sm:w-1/2 aspect-1 mb-4">
         <Pie data={category_detail_OnlineShopping} title='Online Shopping Expense By Category (EUR)' fontSize={16} showLegend={false}/>
       </div>
-      <div class="w-1/2 aspect-1">
+      <div class="w-full sm:w-1/2 aspect-1 mb-4">
         <Pie data={category_detail_Onetime} title='Onetime Expense By Category (EUR)' fontSize={16} showLegend={false}/>
       </div>
-      <div class="w-1/2 aspect-1">
+      <div class="w-full sm:w-1/2 aspect-1 mb-4">
         <Pie data={category_detail_Housing} title='Housing Expense By Category (EUR)' fontSize={16} showLegend={false}/>
       </div>
-      <div class="w-1/2 aspect-1">
+      <div class="w-full sm:w-1/2 aspect-1 mb-4">
         <Pie data={category_detail_Hotel} title='Hotel Expense By Category (EUR)' fontSize={16} showLegend={false}/>
       </div>
-      <div class="w-1/2 aspect-1">
+      <div class="w-full sm:w-1/2 aspect-1 mb-4">
         <Pie data={category_detail_Furniture} title='Furniture Expense By Category (EUR)' fontSize={16} showLegend={false}/>
       </div>
-      <div class="w-1/2 aspect-1">
+      <div class="w-full sm:w-1/2 aspect-1 mb-4">
         <Pie data={category_detail_Subscription} title='Subscription Expense By Category (EUR)' fontSize={16} showLegend={false}/>
       </div>
-      <div class="w-1/2 aspect-1">
+      <div class="w-full sm:w-1/2 aspect-1 mb-4">
         <Pie data={category_detail_Communication} title='Communication Expense By Category (EUR)' fontSize={16} showLegend={false}/>
       </div>
     </div>
